@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team - Pizza Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="employment-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("--VOpoIYVM2XZE5D0");
+        })();
+    </script>
+</head>
+<body>
+
+
+    <!-- Add this after the navbar -->
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Back to Main-page
+        </a>
+    </div>
+
+    <div class="employment-container">
+        <div class="form-header">
+            <h1><i class="fas fa-pizza-slice"></i> Join Our Team</h1>
+            <p>Become part of the Pizza Gallery family!</p>
+        </div>
+
+        <form class="employment-form" id="employmentForm">
+            <div class="form-progress">
+                <div class="progress-step active" data-step="1">
+                    <i class="fas fa-user"></i>
+                    <span>Personal Info</span>
+                </div>
+                <div class="progress-step" data-step="2">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </div>
+                <div class="progress-step" data-step="3">
+                    <i class="fas fa-clock"></i>
+                    <span>Availability</span>
+                </div>
+            </div>
+
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active" data-step="1">
+                <div class="input-group">
+                    <div class="form-field">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" required>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" required>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-field">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                    <span class="focus-border"></span>
+                </div>
+
+                <!-- Age Verification Checkboxes -->
+                <div class="checkbox-group">
+                    <div class="checkbox-field">
+                        <input type="checkbox" id="age16" name="age16" required>
+                        <label for="age16">Are you 16 years or older?</label>
+                    </div>
+                    
+                    <div class="checkbox-field">
+                        <input type="checkbox" id="age18" name="age18">
+                        <label for="age18">Are you 18 years or older?</label>
+                    </div>
+
+                    <div class="checkbox-field">
+                        <input type="checkbox" id="contactPermission" name="contactPermission">
+                        <label for="contactPermission">May we contact you?</label>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 2: Experience -->
+            <div class="form-step" data-step="2">
+                <div class="form-field">
+                    <label for="position">Desired Position</label>
+                    <select id="position" required>
+                        <option value="">Select a position</option>
+                        <option value="server">Server</option>
+                        <option value="cook">Cook</option>
+                        <option value="delivery">Delivery Driver</option>
+                        <option value="host">Host/Hostess</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="experience">Previous Experience</label>
+                    <textarea id="experience" rows="4"></textarea>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Step 3: Availability -->
+            <div class="form-step" data-step="3">
+                <div class="availability-grid">
+                    <div class="day-selector">
+                        <label>Monday</label>
+                        <div class="time-range">
+                            <input type="time" class="time-input">
+                            <span>to</span>
+                            <input type="time" class="time-input">
+                        </div>
+                    </div>
+                    <!-- Repeat for other days -->
+                </div>
+
+                <div class="form-field">
+                    <label for="startDate">Earliest Start Date</label>
+                    <input type="date" id="startDate" required>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="prev-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="employment.js"></script>
+</body>
+</html> 
